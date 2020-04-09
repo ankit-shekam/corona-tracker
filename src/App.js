@@ -1,12 +1,13 @@
-import React from 'react';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <p>corona-tracker</p>
-    </div>
-  );
+
+class App extends React.Component{
+    render(){
+        return(
+            <div>
+                <p>corona-tracker</p>
+            </div>
+        );
+    }
 }
-
 export default App;
