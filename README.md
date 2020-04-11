@@ -2,6 +2,7 @@ this project is a basic Covid 19 statistical tracking application
 using api "https://covid19.mathdro.id/api"
 
 initiatialized using "yarn create react-app" command
+
 additional libraries use are: 
 
 
