@@ -17,17 +17,24 @@ class App extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            data: {}
+            data: {},
+            country: ''
         }
     }
 
     async componentDidMount(){
         const fetchedData = await FetchData();
-        console.log(fetchedData);
         this.setState({
             data: fetchedData
-        })
-        console.log(this.state.data);
+        });
+    }
+
+    handleCountryChange = async (country) => {
+        const fetchedData = await FetchData(country);
+        this.setState({
+            data: fetchedData,
+            country: country   
+        });
     }
 
     render(){
@@ -36,8 +43,8 @@ class App extends React.Component{
             //use {styles.CSSPROPERTY} whenever using .module.css files
             <div className={styles.container}>
                 <Cards data={this.state.data}/>
-                <Charts/>
-                <CountryPicker/>
+                <CountryPicker handleCountryChange={this.handleCountryChange} />
+                <Charts data={this.state.data} country={this.state.country} />
             </div>
         );
     }
