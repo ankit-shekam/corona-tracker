@@ -23,12 +23,14 @@ const Charts = ({data, country}) => {
                     data: dailyData.map(({confirmed}) => confirmed),
                     label: 'infected',
                     borderColor: 'rgba(0, 0, 255, 0.5)',
+                    borderWidth: 2,
                     fill: true
                 },{
                     data: dailyData.map(({deaths}) => deaths),
                     label: 'deaths',
-                    borderColor: 'red',
-                    backgroundColor: 'rgba(255, 0, 0, 0.5)',
+                    borderColor: 'red',   
+                    borderWidth: 2,
+                    backgroundColor: 'rgba(199, 70, 19, 0.767)',
                     fill: true
                 }]
             }}
@@ -48,7 +50,7 @@ const Charts = ({data, country}) => {
                  }}
                 options={{
                     legend: { display: false },
-                    title: { display: true, text: 'current state in' + {country} }
+                    title: { display: true, text: 'current state in ' + country }
                 }}
             />
 
