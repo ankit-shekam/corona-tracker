@@ -21,18 +21,8 @@ great for graphs
 
 
 CHARTJS:
-graphjs-2 did not work till I used this 
+CHART-JS-2 does not work without this 
 
 
 
-
-CLASSNAMES:
-to make the styling easier I use filename.module.css naming for css file
-
-had to use classnames's cx component to use more than one css class from css files in a JSX element
-
-
-
-
-@MATERIAL-UI/CORE:
-similar to react-strap, boot-strap
+@MATERIAL-UI/CORE:for styling
